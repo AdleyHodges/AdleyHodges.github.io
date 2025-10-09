@@ -15,107 +15,154 @@
         display: block;
         position: absolute;
         top: 100px;
-        /* Change me! */
         left: 0px;
       }
 
       .board {
         height: 100vh;
+        background-image: url("data:image/jpeg;base64,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");
+        background-color: #0854eb;
+        background-position: center;
+        background-size: cover;
       }
     </style>
-    <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
   </head>
 
   <body class="board">
-    <!-- HTML for the box -->
     <div class="box">?</div>
+    <div class="misclick-counter">Misses: 0</div>
+    <div class="game-over">GAME OVER</div>
 
     <script>
       (function () {
         "use strict";
-        /* global jQuery */
+        var gameOverMessage = jQuery(".game-over");
 
-        //////////////////////////////////////////////////////////////////
-        /////////////////// SETUP DO NOT DELETE //////////////////////////
-        //////////////////////////////////////////////////////////////////
-
-        var box = jQuery(".box"); // reference to the HTML .box element
-        var board = jQuery(".board"); // reference to the HTML .board element
-        var boardWidth = board.width(); // the maximum X-Coordinate of the screen
-
-        // update the boardWidth variable when the window is resized
+        var box = jQuery(".box");
+        var board = jQuery(".board");
+        var boardWidth = board.width();
+        var counter = jQuery(".misclick-counter"); 
         jQuery(window).on("resize", function () {
           boardWidth = board.width();
         });
 
-        // Every 50 milliseconds, call the update Function (see below)
-        setInterval(update, 50);
+        var interval = setInterval(update, 50);
 
-        // Every time the box is clicked, call the handleBoxClick Function (see below)
-        box.on("click", handleBoxClick);
+        box.on("click", handleBoxClick);  
+        board.on("click", handleBoardClick);
 
-        // moves the Box to a new position on the screen along the X-Axis
-        function moveBoxTo(newPositionX) {
+        var colorStr = "rgb(210, 180, 140)";
+        box.css("background-color", colorStr);
+
+
+        function moveBoxTo(newPositionX, newPositionY) {
           box.css("left", newPositionX);
+          box.css("top", newPositionY);
         }
 
-        // changes the text displayed on the Box
         function changeBoxText(newText) {
           box.text(newText);
         }
 
-        //////////////////////////////////////////////////////////////////
-        /////////////////// YOUR CODE BELOW HERE /////////////////////////
-        //////////////////////////////////////////////////////////////////
+        function getRandomColor() {
+          var r = Math.random() * 255;
+          var g = Math.random() * 255;
+          var b = Math.random() * 255;
+          return "rgb(" + r + ", " + g + ", " + b + ")";
+        }
 
-        // TODO 2 - Variable declarations
+        function endGame() {
+          clearInterval(interval);
+        }
+
         var positionX = 0;
         var points = 0;
         var speed = 10;
+        var positionY = 0;
+        var speedY = 10;
+        var boardHeight = jQuery(window).height();
+        var randNum = Math.random() * 100;
+        var misClicks = 0; // 
+        var gameOver = false;
 
-
-
-        /**
-         * This Function will be called 20 times/second.
-         * Each time it is called, it should move the Box to a new location.
-         * If the box drifts off the screen, turn it around!
-         */
         function update() {
+          if (gameOver) return;
 
-        moveBoxTo(200); // Moves box to x-position 200
-        moveBoxTo(positionX); // Moves box to right edge
-        positionX += speed; // Increases position by 10
-        if (positionX > boardWidth) {
-          speed*= -1;
+          positionX += speed;
+          positionY += speedY;
+
+          moveBoxTo(positionX, positionY);
+
+          if (positionX < 0) {
+            speed = -speed;
+          } else if (positionX > boardWidth - box.width()) {
+            speed = -speed;
+          }
+
+          if (positionY < 0) {
+            speedY = -speedY;
+          } else if (positionY > boardHeight - box.height()) {
+            speedY = -speedY;
+          }
         }
 
-        else if(positionX < 0 ){
-          speed*= -1;
-        }
-      }
+        function handleBoxClick(event) {
+          if (gameOver) return;
 
-        /**
-         * This Function will be called each time the box is clicked.
-         * Each time it is called, it should perform each of the following actions:
-         * - increase the points total
-         * - increase the speed
-         * - move the box to the left side of the screen.
-         */
-        function handleBoxClick() {
           positionX = 0;
           changeBoxText(points);
           points++;
-          speed= 3*points + 10;
+          box.css("background-color", getRandomColor());
 
+          if (points % 3 === 0) {
+            box.css("background-color", getRandomColor());
+            speed = speed + 2;
+          }
 
-
-
-
+          misClicks = 0; 
+          updatemisClicks();
+          event.stopPropagation();
         }
 
+        function handleBoardClick() {
+          if (gameOver) return;
 
-        
+          misClicks++; 
+          updatemisClicks();
+
+          if (misClicks >= 10) {
+            triggerGameOver();
+            alert("Game Over! Too many missed clicks."); 
+          }
+        }
+
+        function updatemisClicks() {
+          counter.text("Misses: " + misClicks);         }
+
+        function triggerGameOver() {
+          gameOver = true;
+          gameOverMessage.fadeIn(500);
+          speed = 0; // 
+          speedY = 0;
+          box.off("click");
+          board.off("click");
+        }
       })();
     </script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+             
+       
+
