@@ -32,7 +32,7 @@
     <div class="box">?</div>
     <div class="misclick-counter">Misses: 0</div>
     <div class="game-over">GAME OVER</div>
-    <h1>Adley's Bouncing Box </h1>
+    <h1>Adley's Bouncing Box</h1>
 
     <script>
       (function () {
@@ -42,19 +42,18 @@
         var box = jQuery(".box");
         var board = jQuery(".board");
         var boardWidth = board.width();
-        var counter = jQuery(".misclick-counter"); 
+        var counter = jQuery(".misclick-counter");
         jQuery(window).on("resize", function () {
           boardWidth = board.width();
         });
 
         var interval = setInterval(update, 50);
 
-        box.on("click", handleBoxClick);  
+        box.on("click", handleBoxClick);
         board.on("click", handleBoardClick);
 
         var colorStr = "rgb(210, 180, 140)";
         box.css("background-color", colorStr);
-
 
         function moveBoxTo(newPositionX, newPositionY) {
           box.css("left", newPositionX);
@@ -83,7 +82,7 @@
         var speedY = 10;
         var boardHeight = jQuery(window).height();
         var randNum = Math.random() * 100;
-        var misClicks = 0; // 
+        var misClicks = 0; //
         var gameOver = false;
 
         function update() {
@@ -120,7 +119,7 @@
             speed = speed + 2;
           }
 
-          misClicks = 0; 
+          misClicks = 0;
           updatemisClicks();
           event.stopPropagation();
         }
@@ -128,22 +127,23 @@
         function handleBoardClick() {
           if (gameOver) return;
 
-          misClicks++; 
+          misClicks++;
           updatemisClicks();
 
           if (misClicks >= 10) {
             triggerGameOver();
-            alert("Game Over! Too many missed clicks."); 
+            alert("Game Over! Too many missed clicks.");
           }
         }
 
         function updatemisClicks() {
-          counter.text("Misses: " + misClicks);         }
+          counter.text("Misses: " + misClicks);
+        }
 
         function triggerGameOver() {
           gameOver = true;
           gameOverMessage.fadeIn(500);
-          speed = 0; // 
+          speed = 0; //
           speedY = 0;
           box.off("click");
           board.off("click");
@@ -152,18 +152,3 @@
     </script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-             
-       
-
