@@ -76,7 +76,7 @@ var init = function (window) {
                 physikz.updatePosition(circles[i]);
                 game.checkCirclePosition(circles[i]);
 
-}
+    }
 }
             
 
@@ -121,7 +121,7 @@ var init = function (window) {
         
         app.addUpdateable(window.opspark.game);
     }
-}
+};
 
 // DO NOT REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
